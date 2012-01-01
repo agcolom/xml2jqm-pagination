@@ -1,6 +1,6 @@
 XLM2JQM-PAGINATION - README
 
-xml2jqm-pagination allows to build a jQuery Mobile application that uses the Pagination plugin, developed by Filament Group, from an XML file. 
+xml2jqm-pagination allows to build a jQuery Mobile application that uses the [Pagination plugin](http://filamentgroup.com/lab/jquery_mobile_pagination_plugin/), developed by [Filament Group](http://filamentgroup.com), from an XML file. 
 
 xml2jqm-pagination is a variant of the xml2jqm plugin.
 

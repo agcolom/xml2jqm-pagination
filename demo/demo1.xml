@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xml2jqm-pagination.xsl" ?>
+<pages_all>
+<doc_title>My title</doc_title>
+<page>
+<page_id>one</page_id>
+<content><img src="images/IMG_01.jpg" /></content>
+</page>
+<page>
+<page_id>two</page_id>
+<content><img src="images/IMG_02.jpg" /></content>
+</page>
+<page>
+<page_id>three</page_id>
+<content><img src="images/IMG_03.jpg" /></content>
+</page>
+<page>
+<page_id>four</page_id>
+<content><img src="images/IMG_04.jpg" /></content>
+</page>
+<page>
+<page_id>three</page_id>
+<content><img src="images/IMG_05.jpg" /></content>
+</page>
+<page>
+<page_id>four</page_id>
+<content><img src="images/IMG_06.jpg" /></content>
+</page>
+</pages_all>

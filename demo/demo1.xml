@@ -19,11 +19,11 @@
 <content><img src="images/IMG_04.jpg" /></content>
 </page>
 <page>
-<page_id>three</page_id>
+<page_id>five</page_id>
 <content><img src="images/IMG_05.jpg" /></content>
 </page>
 <page>
-<page_id>four</page_id>
+<page_id>six</page_id>
 <content><img src="images/IMG_06.jpg" /></content>
 </page>
 </pages_all>

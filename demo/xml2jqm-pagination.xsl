@@ -35,66 +35,37 @@
     <title><xsl:value-of select="pages_all/doc_title" /></title>
     </head>
     
-    <body>
-      
-      <h1>some text</h1>
-    <xsl:for-each select="pages_all/page">
+<body>
+  
+      <xsl:for-each select="pages_all/page">
       <div data-role="page">
-      <xsl:if test="page_theme!=''">
-      <xsl:attribute name="data-theme"><xsl:value-of select="page_theme" /></xsl:attribute>
-        </xsl:if>
       <xsl:attribute name="id"> <xsl:value-of select="page_id" /> </xsl:attribute>
-      <div data-role="header">
-        <xsl:if test="header_theme!=''">
-          <xsl:attribute name="data-theme"><xsl:value-of select="header_theme" /></xsl:attribute>
-        </xsl:if>
-        
-      </div> 
-      <!-- /header -->
-      <div data-role="content">
-        <xsl:if test="content_theme!=''">
-          <xsl:attribute name="data-theme"><xsl:value-of select="content_theme" /></xsl:attribute>
-        </xsl:if>
-	 <xsl:copy-of select="child::content/node()" /></div>
+
+    <xsl:copy-of select="child::content/node()" />
          <ul data-role="pagination">
          <li class="ui-pagination-prev"> 
-          <a>
-         <xsl:choose>
+          <a><xsl:choose>
          <xsl:when test="position() != 1" >
-         
           <xsl:attribute name="href">#<xsl:value-of select="preceding-sibling::page[1]/page_id" /></xsl:attribute>
           </xsl:when>
           <xsl:otherwise>
           <xsl:attribute name="href">#<xsl:value-of select="//page[last()]/page_id" /></xsl:attribute>
           </xsl:otherwise>
           </xsl:choose>
-          <xsl:attribute name="data-direction">reverse</xsl:attribute>
-        Prev</a></li>
+          <xsl:attribute name="data-direction">reverse</xsl:attribute>Prev</a></li>
          <li class="ui-pagination-next"><a><xsl:choose><xsl:when test="position() != last()" >
-          
           <xsl:attribute name="href">#<xsl:value-of select="following-sibling::page/page_id" /></xsl:attribute>
           </xsl:when>
           <xsl:otherwise>
           <xsl:attribute name="href">#<xsl:value-of select="//page[1]/page_id" /></xsl:attribute>
           </xsl:otherwise>
-          </xsl:choose>
-          Next</a></li>
+          </xsl:choose>Next</a></li>
           </ul>
       <!-- /content -->
-        <xsl:if test="footer!=''">
-      <div data-role="footer">
-        <xsl:if test="footer_theme!=''">
-          <xsl:attribute name="data-theme"><xsl:value-of select="footer_theme" /></xsl:attribute>
-        </xsl:if>
-        <xsl:if test="footer_position!=''">
-          <xsl:attribute name="data-position"><xsl:value-of select="footer_position" /></xsl:attribute>
-        </xsl:if>
-        <h4><xsl:value-of select="footer" /></h4>
-      </div></xsl:if>
-      <!-- /footer -->
       </div><!-- page -->
     </xsl:for-each>
     </body>
     </html>
   </xsl:template>
 </xsl:stylesheet>
+
